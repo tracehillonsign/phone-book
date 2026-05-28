@@ -1,14 +1,14 @@
 #include "utils.h"
 #include "common.h"
 
-/* Открывает файл или заканчивает программу с ошибкой. */
-FILE *fopen_or_exit(const char *name, const char *mode)
+/* Открыть файл или закончить выполнение программы. */
+FILE *fopen_or_exit(const char *filename, const char *mode)
 {
-    FILE *file = fopen(name, mode);
+    FILE *file = fopen(filename, mode);
 
     if (file == NULL) {
-        perror("[utils:fopen_or_exit] Ошибка открытия файла: ");
-        exit(EXIT_FOPEN);
+        perror("[utils:fopen_or_exit] fopen: ");
+        exit(1);
     }
 
     return file;
