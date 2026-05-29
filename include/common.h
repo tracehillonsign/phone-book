@@ -5,10 +5,4 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define STORAGE "contacts.bin"
-
-typedef struct
-{
-    char *name;
-    char *phone;
-} Contact;
+#define FILEBASE "contact.bin"
